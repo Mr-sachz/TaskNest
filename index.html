@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TaskNest 🪶</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small browser task list with persistent state.">
+  <title>TaskNest | Task List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>TaskNest 🪶</h1>
+  <main class="container">
+    <h1>TaskNest</h1>
+    <p>Keep a short list of what needs doing.</p>
     <form id="task-form">
-      <input type="text" id="task-input" placeholder="What's next?" required />
-      <button type="submit">Add</button>
+      <label for="task-input">New task</label>
+      <div class="form-row">
+        <input id="task-input" type="text" maxlength="120" placeholder="What's next?" autocomplete="off" required>
+        <button type="submit">Add task</button>
+      </div>
     </form>
-    <ul id="task-list"></ul>
-  </div>
-
-  <script src="script.js"></script>
+    <h2>Your tasks <span id="task-count" aria-live="polite">0</span></h2>
+    <ul id="task-list" aria-label="Tasks"></ul>
+    <p id="empty-state">No tasks yet. Add one above to get started.</p>
+  </main>
 </body>
 </html>
