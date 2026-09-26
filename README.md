@@ -1,11 +1,21 @@
-# TaskNest
+# Task Management Prototype
 
-A small, dependency-free task list for the browser. Add tasks, mark them complete and remove them when they are no longer needed. Task state is stored locally in the browser.
+TaskNest is a compact browser task workspace built around fast capture, clear state and low-friction review.
 
-## Run
+## Highlights
 
-Open index.html in a modern browser. No account, server or build step is required.
+- Add, complete and remove tasks without leaving the page
+- Persist the current task list in browser storage
+- Keep interaction keyboard-friendly with semantic form controls
+- Render user input as text, keeping the interface predictable
+- Stay dependency-free and easy to run locally
 
-## Scope
+## Technical approach
 
-This is a client-side learning project. It does not synchronise across devices or provide a hosted task service.
+The interface is driven by a small state collection. Each change updates the state, persists it and renders the current view. The implementation keeps the data model visible so the interaction flow is easy to extend.
+
+## Run locally
+
+Open index.html in a modern browser. There is no build step or server requirement.
+
+TaskNest is designed as a focused client-side project for exploring the foundations of task products: capture, completion state, persistence and feedback.
